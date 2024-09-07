@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--text-color);
 }
 /* psedo-selector*/
 :root {
@@ -26,6 +25,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
   /* FUNDO DO PROJETO
   background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -36,9 +36,8 @@ body {
 }
 
 body * {
-  .inter {
-    font-family: "Inter", sans-serif;
-  }
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 /*seletor de ID */
@@ -178,4 +177,13 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+/* midia queries */
+@media (min-width: 700px) { /* media so funciona quando tem a tag <meta> name="viewport" no HTML */
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
