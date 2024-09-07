@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Definindo um documento HTML 5 -->
+<html lang="pt-br" class="">
+  <!-- Tem o HTML em si document element ou root html raiz do HTML -->
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- HEAD é uma tag filho, configurações da pagina ajusta o documento que não são visiveis pra quem esta acessando a pagina-->
+    <meta charset="UTF-8" />
+    <!-- Configuracoes do proprio doc defino quais conjuntos de caracteres usados na pagina-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- define o conteudo dentro da pagina e define que o conteudo e se adequa ao tamanho da tela -->
+    <title>DevLinks</title>
+    <!-- Titulo do documento -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- rel=relation relacionamento com um arquivo do tipo stylesheet href=referencia onde esta o arquivo css -->
+  </head>
+  <body>
+    <!-- é a parte visivel da pagina configurada no head -->
+    <div id="container">
+      <div id="profile">
+        <img
+          src="./assets/avatar.png"
+          alt="Foto de Mayk Brito, usando óculos e camiseta preta e fundo amarelo"/>
+        <p>@maykbrito</p>
+      </div>
+
+        <div id="switch" onclick="toggleMode()">
+          <button>
+            </button>
+            <span></span>
+        </div>
+
+      <ul>
+        <!-- onde cria lista nao ordena -->
+        <li>
+          <!-- é um item da lista -->
+          <a href="#">Inscrever-se no NLW</a>
+        </li>
+        <li>
+          <!-- é um item da lista -->
+          <a href="#">Baixar meu e-book</a>
+        </li>
+        <li>
+          <!-- é um item da lista -->
+          <a href="#">Veja meu portfólio</a>
+        </li>
+        <li>
+          <!-- é um item da lista o atributo target _blank é utilizado para quando clicar no link abrir outra aba pra nao sobrepor sobre a minha pagina principal-->
+          <a href="https://rocketseat.com.br/explorer"
+            target="_blank" </a>
+          Conheça o explorer</a
+          >
+        </li>
+      </ul>
+      <div id="social-links"> <!--utilizado para inserir icones na pagina pelo site ionicons  --> 
+        <a href="https://github.com/VictorKoga" target="_blank">
+         <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/victor.koga" target="_blank">
+         <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/@VKGA" target="_blank">
+         <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-koga-5336001b8/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <footer><!-- tag utilizada geralmente quando vai fazer o rodapé do site-->
+        Desenvolvido por: <a href="https://rocketseat.com.br">Rocketseat</a>
+      </footer>
+    </div>
+    <!-- sempre que for utilizar um icone da pagina ionicons sempre estar adicionando esse script antes do body-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"> </script>
+  </body>
+</html>
