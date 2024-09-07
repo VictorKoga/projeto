@@ -2,27 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--text-color);
 }
 /* psedo-selector*/
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --sufarce-color: rgba(255, 255, 255, 0.5);
+  --sufarce-color: rgba(0, 0, 0, 0.5);
   --sufarce-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg)
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --sufarce-color: rgba(0, 0, 0, 0.5);
+  --sufarce-color: rgba(255, 255, 255, 0.5);
   --sufarce-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
-   --switch-bg-url: url(./assets/sun.svg)
+  --switch-bg-url: url(./assets/sun.svg);
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
@@ -35,10 +35,9 @@ body {
   /* agrupar backgound: color image repeat position/size* < propriedade chamada de short-hand ou atalho fez o agrupamento de toda a linha de cima em uma linha só*/
 }
 
-body *{
+body * {
   .inter {
     font-family: "Inter", sans-serif;
-    color: var(--text-color);
   }
 }
 
@@ -82,34 +81,35 @@ body *{
   position: relative;
   width: 64px;
   margin: 4px auto;
-  
 }
 
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
 
-  position: absolute;/*quando usado o termo absolute ele faz uma sobreposição de camadas*/
+  position: absolute; /*quando usado o termo absolute ele faz uma sobreposição de camadas*/
   top: 50%;
   left: 0;
   z-index: 1;
-  transform: translateY(-50%);/* eixo Y pode movimentar o elemento pra cima e pra baixo */
+  transform: translateY(
+    -50%
+  ); /* eixo Y pode movimentar o elemento pra cima e pra baixo */
 }
 
 .light #switch button {
   right: 0;
-  left: initial; 
+  left: initial;
 }
 
 #switch span {
   display: block;
   width: 64px;
   height: 24px;
-  background: var(--sufarce-color) ;
-  border: 1px solid var(--stroke-color) ;
+  background: var(--sufarce-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 9999px;
 }
 
@@ -178,4 +178,3 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-
